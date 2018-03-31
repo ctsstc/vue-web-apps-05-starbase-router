@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app container">
     <h3>Starbase Router</h3>
     <h4>
       <router-link class="link" to="/data/people">Meet the Characters</router-link> |

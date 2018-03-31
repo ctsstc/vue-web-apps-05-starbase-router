@@ -1,12 +1,20 @@
 <template>
-  <div class="">
+  <div class="col-md-12">
     Type: {{type}}
     <br><br>
-    {{items}}
+    <div class="row">
+      <Item
+        v-for="(item, index) in items"
+        :key="index"
+        :item="item"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+  import Item from './Item.vue';
+
   export default {
     data() {
       return {
@@ -37,6 +45,9 @@
     },
     created() {
       this.fetchItems()
+    },
+    components: {
+      Item
     }
   }
 </script>
