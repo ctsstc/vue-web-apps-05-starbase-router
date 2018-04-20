@@ -6,7 +6,8 @@
       <Item
         v-for="(item, index) in items"
         :key="index"
-        :item="item"
+        :passed-item="item"
+        :type="type"
       />
     </div>
   </div>
@@ -33,9 +34,9 @@
 
         for (let i in initial_ids) {
           let id = initial_ids[i];
-          console.log({id});
+          //console.log({id});
           fetch(
-            `https://swapi.co/api/${this.type}/${id}/`, 
+            `https://swapi.co/api/${this.type}/${id}/`,
             { method: 'GET' }
           )
           .then(res => res.json())
